@@ -45,6 +45,14 @@ public class DocumentRest{
 	public Response notFoundStatus(Object obj){
 		return Response.status(404).entity(obj).build();
 	}
+
+	@GET
+	@Path("test")
+	@Produces(MediaType.PLAIN_TEXT)
+	public Response test() {
+		System.out.println("test");
+		return okStatus("test");
+	}
 	
 	
 	@GET
