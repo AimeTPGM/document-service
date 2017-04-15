@@ -17,7 +17,7 @@ public class MongoDBMain {
     private static final String DB_NAME = "documenttest";
     private static final String COLLECTION = "documenttestonly";
     private static final String MONGO_HOST = "localhost";
-    private static final int MONGO_PORT = 27018;
+    private static final int MONGO_PORT = 27017;
     private static MongoClient mongo;
     private static DB db;
     private static ApplicationContext ctx;
