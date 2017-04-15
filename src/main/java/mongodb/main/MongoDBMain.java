@@ -24,6 +24,7 @@ public class MongoDBMain {
  
     public static void run() {
         try {
+            
        	System.out.println("connecting to mongodb at"+MONGO_HOST+":"+MONGO_PORT+"...\ndatabase name: "+DB_NAME+"\ncollection: "+COLLECTION);
         	mongo = new MongoClient(
                     MONGO_HOST, MONGO_PORT);

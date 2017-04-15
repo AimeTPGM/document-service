@@ -10,7 +10,7 @@ import mongodb.main.MongoDBMain;
 public class Application {
 	public static void main(String[] args) {
 		System.out.println("Starting Document Service ...");
-		System.out.println(Iterables.class.getProtectionDomain().getCodeSource().getLocation());
+		// System.out.println(Iterables.class.getProtectionDomain().getCodeSource().getLocation());
 		MongoDBMain.run();
 		System.out.println("Starting Spring Application...");
 		SpringApplication.run(Application.class, args);
