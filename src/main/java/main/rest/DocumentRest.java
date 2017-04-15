@@ -48,7 +48,7 @@ public class DocumentRest{
 
 	@GET
 	@Path("test")
-	@Produces(MediaType.PLAIN_TEXT)
+	@Produces(MediaType.TEXT_PLAIN)
 	public Response test() {
 		System.out.println("test");
 		return okStatus("test");

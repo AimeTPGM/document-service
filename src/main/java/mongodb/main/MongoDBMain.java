@@ -16,7 +16,7 @@ public class MongoDBMain {
 	 
     private static final String DB_NAME = "documenttest";
     private static final String COLLECTION = "documenttestonly";
-    private static final String MONGO_HOST = "localhost";
+    private static final String MONGO_HOST = "210.121.158.167";
     private static final int MONGO_PORT = 27017;
     private static MongoClient mongo;
     private static DB db;
@@ -24,8 +24,8 @@ public class MongoDBMain {
  
     public static void run() {
         try {
-            
-       	System.out.println("connecting to mongodb at"+MONGO_HOST+":"+MONGO_PORT+"...\ndatabase name: "+DB_NAME+"\ncollection: "+COLLECTION);
+
+       	System.out.println("connecting to mongodb at "+MONGO_HOST+":"+MONGO_PORT+"...\ndatabase name: "+DB_NAME+"\ncollection: "+COLLECTION);
         	mongo = new MongoClient(
                     MONGO_HOST, MONGO_PORT);
         	db = mongo.getDB(DB_NAME);
