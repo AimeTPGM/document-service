@@ -69,10 +69,20 @@ public class DocumentRest{
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getDocument(
 			@QueryParam("documentId") String id) {
-		System.out.println("GET Request: getdocument");
+		System.out.println("GET Request: get document");
 		document = documentDAO.readById(id);
 		if(document == null) return notFoundStatus("404 Document Not Found");
 		return okStatus(document);
+	}
+	
+	@GET
+	@Path("getPublishDocuments")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getPublishDocument() {
+		System.out.println("GET Request: get publish document");
+		documents = documentDAO.getAllPublishDocuments();
+		if(documents == null) return notFoundStatus("404 Publish Documents Not Found");
+		return okStatus(documents);
 	}
 	
 	@GET
@@ -85,6 +95,7 @@ public class DocumentRest{
 		if(documents == null) return notFoundStatus("404 Document Lists not Found");
 		return okStatus(documents);
 	}
+	
 	
 	
 	@POST

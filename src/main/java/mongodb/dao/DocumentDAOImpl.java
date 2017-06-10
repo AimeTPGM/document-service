@@ -90,4 +90,11 @@ public class DocumentDAOImpl implements DocumentDAO{
 		return mongoOps.find(query, Document.class, COLLECTION);
 	}
 
+	public List<Document> getAllPublishDocuments() {
+		Query query = new Query();
+		query.addCriteria(Criteria.where("documentStatus").is("Publish"));
+		System.out.println("DAO: Return publish documents");
+		return mongoOps.find(query, Document.class, COLLECTION);
+	}
+
 }
